@@ -3,6 +3,9 @@ body {
     height: 100%;
     overflow: hidden; 
 }
+* {
+  box-sizing: border-box;
+}
 
 .Loop {
   position: relative;
@@ -65,7 +68,7 @@ nav {
 
 nav ul {
   float: right;
-  width:300px;
+  width: 300px;
   list-style-type: none;
   justify-content: space-around;
   margin: 0;
@@ -84,8 +87,11 @@ nav ul li{
 }
 
 .landing {
-    background: #FFB8C7;
+  
     color: black;
+    background-position: center;
+  background-size: cover;
+  position: relative;
 }
 .about {
   background: #F9D7D6;
@@ -94,18 +100,14 @@ nav ul li{
   background: #B0C1DB;
   color: black;
 }
-.contact {
-  background: #8EACD0;
-  color: white;
+.team {
+  background: white;
+  color: black;
 }
 
 
 h1 {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
+  
   font-size: 80px;
   letter-spacing: 5px;
   text-transform: uppercase;
@@ -120,4 +122,119 @@ footer{
   visibility: hidden;
   position: absolute;
   top: -9999px;
+}
+.loading-dots {
+  text-align: center;
+  z-index: 5;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  
+}
+.dot {
+    display: inline;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+    position: relative;
+    top: -1em;
+    font-size: 3.5em;
+    opacity: 0;
+    animation: showHideDot 2.5s ease-in-out infinite;
+
+    
+  }
+  .one {
+      animation-delay: 0.2s;
+  }
+  .two {
+      animation-delay: 0.4s;
+  }
+  .three {
+    animation-delay: 0.6s;
+  }
+@keyframes showHideDot {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+.column-50{
+  float: left;
+  width: 50%;
+  padding: 0 10px;
+}
+.column-full{
+  float: left;
+  width: 100%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 20px -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 800px) {
+  .column {
+    width: 50%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+.card .content{
+  display: flex;
+  align-items: center;
+}
+.wrapper .card .img{
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  
+  background: #fff;
+  border-radius: 50%;
+  padding: 5px;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+}
+.card .img img{
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.card .details{
+  margin-left: 50px;
+}
+.details span{
+  font-weight: 400;
+  font-size: 14px;
 }
