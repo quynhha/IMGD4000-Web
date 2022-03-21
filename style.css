@@ -1,0 +1,123 @@
+html,
+body {
+    height: 100%;
+    overflow: hidden; 
+}
+
+.Loop {
+  position: relative;
+  height: 100%;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+section {
+  position: relative;
+  text-align: center;
+  height: 100%;
+  scroll-snap-align: start;
+}
+
+::scrollbar {
+  display: none;
+}
+
+
+body {
+    position: relative;
+}
+#logo a{
+    text-decoration: none;
+    font-family: 'Cookie', cursive;
+    font-size: 38px;
+    font-weight: 300;
+    
+    color: black;
+}
+
+span{
+    color: #FF5E5E;
+}
+#logo{
+    padding: 0 0 0 20px;
+    float: left;
+}
+#landing #logo p{
+    text-decoration: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    letter-spacing: 5px;
+    font-size: 10px;
+    color: black;
+    text-transform: uppercase;
+    margin: 2px 0;
+}
+
+nav {
+  
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+nav ul {
+  float: right;
+  width:300px;
+  list-style-type: none;
+  justify-content: space-around;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+nav ul li{
+  display: flex;
+  justify-content: space-around;
+  font-family: "BrownStd";
+}
+
+.nav-link{
+  text-decoration: none;
+  color: black;
+}
+
+.landing {
+    background: #FFB8C7;
+    color: black;
+}
+.about {
+  background: #F9D7D6;
+}
+.work {
+  background: #B0C1DB;
+  color: black;
+}
+.contact {
+  background: #8EACD0;
+  color: white;
+}
+
+
+h1 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  font-size: 80px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+}
+.invisible {
+  visibility: hidden;
+  position: absolute;
+  top: -9999px;
+}
