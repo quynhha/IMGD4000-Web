@@ -74,7 +74,9 @@ nav ul {
   margin: 0;
   padding: 1rem 0;
 }
-
+nav #logo .epsilon{
+  font-size: 80px;
+}
 nav ul li{
   display: flex;
   justify-content: space-around;
@@ -101,13 +103,23 @@ nav ul li{
   color: black;
 }
 .team {
-  background: white;
+  background: rgb(224, 223, 223);
   color: black;
+}
+.contact{
+  background: black;
+  color: white;
+}
+.contact-d{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
 }
 
 
 h1 {
-  
   font-size: 80px;
   letter-spacing: 5px;
   text-transform: uppercase;
@@ -170,13 +182,13 @@ footer{
 }
 .column {
   float: left;
-  width: 25%;
+  width: 50%;
   padding: 0 10px;
 }
 
 .column-50{
   float: left;
-  width: 50%;
+  width: 100%;
   padding: 0 10px;
 }
 .column-full{
@@ -197,11 +209,31 @@ footer{
 
 /* Responsive columns */
 @media screen and (max-width: 800px) {
+  h1{
+    font-size: 60px;
+  }
   .column {
     width: 50%;
     display: block;
     margin-bottom: 20px;
   }
+  .column-50{
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  nav #logo .epsilon{
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 600px) {
+  nav ul {
+    width: 290px;
+  }
+  nav ul li{
+    font-size: small;
+  }
+  
 }
 
 /* Style the counter cards */
@@ -209,7 +241,7 @@ footer{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 16px;
   text-align: center;
-  background-color: #f1f1f1;
+  background-color: #fff;
 }
 .card .content{
   display: flex;
@@ -237,4 +269,44 @@ footer{
 .details span{
   font-weight: 400;
   font-size: 14px;
+}
+input[type=submit] {
+
+  padding: 14px 20px;
+  margin: 8px 0;
+  background-color: #fff;
+  color: black;
+  border: 2px solid #000;
+	border-radius: 3rem;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  opacity: 0.7;
+}
+input[type=email], select {
+  
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-envelope {
+  background: #3B5998;
+  color: white;
 }
