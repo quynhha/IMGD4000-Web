@@ -103,14 +103,16 @@ nav ul li{
   color: black;
 }
 .team {
-  background: rgb(224, 223, 223);
+  background: #e5e5e5;
   color: black;
+  
 }
 .contact{
   background: black;
   color: white;
+  
 }
-.contact-d{
+.contact-d,.team-d{
   margin: 0;
   position: absolute;
   top: 50%;
@@ -225,6 +227,14 @@ footer{
   nav #logo .epsilon{
     font-size: 40px;
   }
+  .card{
+    display: block;
+    width: 100%;
+  }
+  .row{
+    
+  }
+
 }
 @media screen and (max-width: 600px) {
   nav ul {
@@ -236,36 +246,6 @@ footer{
   
 }
 
-/* Style the counter cards */
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px;
-  text-align: center;
-  background-color: #fff;
-}
-.card .content{
-  display: flex;
-  align-items: center;
-}
-.wrapper .card .img{
-  height: 40px;
-  width: 40px;
-  position: absolute;
-  
-  background: #fff;
-  border-radius: 50%;
-  padding: 5px;
-  box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
-}
-.card .img img{
-  height: 100%;
-  width: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-}
-.card .details{
-  margin-left: 50px;
-}
 .details span{
   font-weight: 400;
   font-size: 14px;
@@ -309,4 +289,54 @@ input[type=email], select {
 .fa-envelope {
   background: #3B5998;
   color: white;
+}
+
+.card span{
+  color: salmon;
+}
+
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width:14%;
+  background-color: white;
+  height: fit-content;
+  flex:left;
+  margin: 2px;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 16px;
+}
+.row{
+  display:flex;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+p button{
+  position: relative;
+  bottom: 0;
+}
+
+
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+.team .row h1{
+  font-size: medium;
 }
